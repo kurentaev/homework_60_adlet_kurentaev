@@ -1,13 +1,4 @@
 {% csrf_token %}
 {% load django_bootstrap5 %}
-
-
-{% for field in form %}
-    <p><label for="">{{ field.label }}</label></p>
-       {% for error in field.errors %}
-           <p class="text-danger">{{ error }}</p>
-       {% endfor %}
-    <p>{{ field }}</p>
-{% endfor %}
-
-<input class="btn btn-light" type="submit" value="{{ button_text }}"/>
+{% bootstrap_form form %}
+{% bootstrap_button button_type="submit" content=button_text %}

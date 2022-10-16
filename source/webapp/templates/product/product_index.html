@@ -1,31 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form action="" method="get">
-        {% include "partial/product_form.html" with button_text="Find" %}
-    </form>
+    {% include 'partial/search.html' %}
     <hr>
       <main role="main" class="inner cover">
         <p class="lead">
+          <h4>{% if products|length == 0 %}
+          Products not found
+          {% else %}
+          {% endif %}</h4>
             {% for product in products %}
+            {% if product.rest < 1 %}
+            {% else %}
             <table>
               <tr>
                 <td><img src="{{ product.image }}" class="card-img-top" alt="image"></td>
                 <td>
                   <h2><a class="detail" href="{% url 'product_detail' product.pk %}">{{ product.title }}</a></h2>
-                  <h2>Category:
-                    {% for choice in choices %}
-                      {% if product.category == choice.0 %}
-                        {{ choice.1 }}
-                      {% endif %}
-                    {% endfor %}
-                  </h2>
+                  <h2>Category: {{ product.get_category_display }}</h2>
                   <h2>Price: {{ product.price }} $</h2>
                 </td>
               </tr>
             </table>
             <hr>
+            {% endif %}
+
             {% endfor %}
+            {% if is_paginated %}
+                {% include 'partial/pagination.html' %}
+            {% endif %}
         </p>
       </main>
 

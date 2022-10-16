@@ -15,13 +15,7 @@ Product
               <tr>
                   <td><img src="{{ product.image }}" class="card-img-top" alt="image"></td>
                   <td>
-                    <h2>Category:
-                      {% for choice in choices %}
-                        {% if product.category == choice.0 %}
-                          {{ choice.1 }}
-                        {% endif %}
-                      {% endfor %}
-                    </h2>
+                    <h2>Category: {{ product.get_category_display }}</h2>
                     <h2>Rest: {{ product.rest }}</h2>
                     <h2>Price: {{ product.price }} $</h2>
                   </td>
