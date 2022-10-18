@@ -1,11 +1,13 @@
-from django.contrib import messages
-from django.core.exceptions import ValidationError
-from django.http import HttpResponseRedirect, HttpResponseBadRequest
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, ListView, DeleteView
-from webapp.models import Basket, Product
-from webapp.forms import BasketForm
+from webapp.models import Basket, Product, Order, ProductOrder
+from webapp.forms import BasketForm, OrderForm
+
+
+def get_success_url(self):
+    return reverse('index')
 
 
 class BasketAddView(CreateView):
@@ -16,30 +18,25 @@ class BasketAddView(CreateView):
     def form_valid(self, form):
         product = get_object_or_404(Product, pk=self.kwargs.get("pk"))
         quantity = form.cleaned_data.get("quantity")
-        message = f"<h3>Rest of {product.title} in warehouse {product.rest}. Can't add {quantity} pc. in basket </h3>" \
-                  f"<a href='/'><h3 class='masthead-brand'>Go back</h3></a>"
         try:
             basket = Basket.objects.get(product=product)
         except Basket.DoesNotExist:
             if product.rest == 0:
-                return HttpResponseBadRequest(message)
+                return HttpResponseRedirect(get_success_url(self))
             else:
                 basket = Basket.objects.create(product=product)
         if quantity > product.rest:
             basket.delete()
-            return HttpResponseBadRequest(message)
+            return HttpResponseRedirect(get_success_url(self))
         else:
             if not basket:
                 basket.quantity = quantity
             else:
                 basket.quantity += quantity
             if basket.quantity > product.rest:
-                return HttpResponseBadRequest(message)
+                return HttpResponseRedirect(get_success_url(self))
             basket.save()
-        return HttpResponseRedirect(self.get_success_url())
-
-    def get_success_url(self):
-        return reverse('index')
+        return HttpResponseRedirect(get_success_url(self))
 
 
 class BasketView(ListView):
@@ -50,7 +47,7 @@ class BasketView(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(object_list=None, **kwargs)
         context['get_total'] = Basket.get_total()
-        # context['form'] = OrderForm()
+        context['form'] = OrderForm()
         return context
 
 
@@ -60,3 +57,21 @@ class BasketDeleteView(DeleteView):
 
     def get(self, request, *args, **kwargs):
         return self.delete(request, *args, **kwargs)
+
+
+class OrderAddView(CreateView):
+    model = Order
+    form_class = OrderForm
+
+    def form_valid(self, form):
+        order = form.save()
+        products = []
+        in_basket = []
+        for item in Basket.objects.all():
+            in_basket.append(ProductOrder(product=item.product, quantity=item.quantity, order=order))
+            item.product.rest -= item.quantity
+            products.append(item.product)
+        ProductOrder.objects.bulk_create(in_basket)
+        Product.objects.bulk_update(products, ("rest",))
+        Basket.objects.all().delete()
+        return HttpResponseRedirect(get_success_url(self))

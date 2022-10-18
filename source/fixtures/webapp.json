@@ -1,43 +1,15 @@
 [
 {
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$390000$EbKksnG417huqsPKDyJmVX$d87mqsorZLiB1JePbvOpiiwayahMk9bk/l+mikZdS2g=",
-    "last_login": "2022-10-03T03:33:20.232Z",
-    "is_superuser": true,
-    "username": "root",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2022-10-01T16:26:30.554Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 1,
-  "fields": {
-    "title": "LORO PIANA",
-    "description": "This reversible brown bomber jacket from Loro Piana features a smooth Napa leather side, and a soft, curly shearling surface on the other, finished with cashmere trims. It also has a wide hood and large pockets for a sports-inspired twist.\r\n\r\n\r\nmaterial: 100% shearling\r\ndetails: 100% cashmere\r\ncare instructions: specialist clean\r\nside slit pockets\r\ntwo-way zipped front\r\nMade in Italy\r\nhood\r\nelasticated cuffs\r\nelasticated waistband\r\nDesigner colour name: Ebony Multi\r\ncomes with garment bag",
-    "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/35/P00585836.jpg",
-    "category": "jackets",
-    "rest": 10,
-    "price": "60.00"
-  }
-},
-{
   "model": "webapp.product",
   "pk": 2,
   "fields": {
+    "created_at": "2022-10-16T11:31:10.943Z",
+    "updated_at": "2022-10-18T08:59:29.212Z",
     "title": "VALENTINO GARAVANI",
     "description": "Back with an XL platform refresh, the One Stud low-top sneakers from Valentino Garavani are made from nappa leather and have a molded stud detail applied to one side and onto the rubber soles at the heel.\r\n\r\n\r\nupper: leather\r\nlining: leather\r\nsole: leather insole, rubber sole\r\nlace-up\r\nMade in Italy\r\ncomes with dust bags\r\ncomes with a box\r\nDesigner colour name: Bianco",
     "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/b3/P00689115.jpg",
     "category": "shoes",
-    "rest": 15,
+    "rest": 20,
     "price": "10.00"
   }
 },
@@ -45,11 +17,13 @@
   "model": "webapp.product",
   "pk": 3,
   "fields": {
+    "created_at": "2022-10-16T11:31:10.943Z",
+    "updated_at": "2022-10-16T11:31:10.946Z",
     "title": "TOM FORD",
     "description": "Handcrafted in Los Angeles, these slim-fit Tom Ford jeans in blue have a straight leg, a classic five-pocket design and concealed buttoned fly\r\n\r\n\r\nmaterial: 98% cotton, 2% elastane\r\npocket lining: 100% cotton\r\ncare instructions: machine wash at 30 degrees\r\nfive pockets\r\nbuttoned placket\r\nMade in the USA\r\nbelt loops\r\nDesigner colour name: Md Blu Sld",
     "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/51/P00652669.jpg",
     "category": "jeans",
-    "rest": 20,
+    "rest": 18,
     "price": "100.00"
   }
 },
@@ -57,11 +31,13 @@
   "model": "webapp.product",
   "pk": 4,
   "fields": {
+    "created_at": "2022-10-16T11:31:10.943Z",
+    "updated_at": "2022-10-17T17:44:11.089Z",
     "title": "GUCCI",
     "description": "This light blue shirt from Gucci is made from cotton, with double G embroidery at the chest. It has self-covered buttons and a boxy fit.\r\n\r\n\r\nmaterial: 100% cotton\r\ncare instructions: hand wash\r\nbreast pocket\r\nbuttoned front\r\nMade in Italy\r\nbuttoned cuffs\r\nDesigner colour name: Sky Blue",
     "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/49/P00737498.jpg",
     "category": "shirts",
-    "rest": 7,
+    "rest": 2,
     "price": "250.00"
   }
 },
@@ -69,6 +45,8 @@
   "model": "webapp.product",
   "pk": 5,
   "fields": {
+    "created_at": "2022-10-16T11:31:10.943Z",
+    "updated_at": "2022-10-16T11:31:10.946Z",
     "title": "TOM FORD",
     "description": "Crafted from technical canvas, this duffel bag from Tom Ford is accented with leather trims and two top handles, comes with a removable shoulder strap and is finished with golden hardware for a signature touch.\r\n\r\n\r\nmaterial: polyester\r\ntrim: calf leather\r\ninternal details: fabric lining, internal zipped pocket, internal slot pockets\r\ncolour of fastening: gold\r\ndetachable, adjustable shoulder strap, top handles\r\ntwo-way zipped top\r\nMade in Italy\r\ncomes with dust bag\r\nDesigner colour name: Black",
     "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/c6/P00596823.jpg",
@@ -81,6 +59,8 @@
   "model": "webapp.product",
   "pk": 7,
   "fields": {
+    "created_at": "2022-10-16T11:31:10.943Z",
+    "updated_at": "2022-10-16T11:31:10.946Z",
     "title": "VALENTINO GARAVANI",
     "description": "Crafted in Italy from grained leather, this brown briefcase from Saint Laurent is embossed with the label's logo on the front. It comes with top handles and an adjustable shoulder strap.\r\n\r\n\r\nmaterial: leather\r\ninternal details: leather lining, internal zipped pocket, internal slot pockets\r\ndetachable, adjustable shoulder strap, top handles\r\nzipped top\r\nMade in Italy\r\nzipped front pocket\r\ncomes with dust bag\r\nDesigner colour name: Fondant/Antique Brass",
     "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/1d/P00675760.jpg",
@@ -93,12 +73,102 @@
   "model": "webapp.product",
   "pk": 12,
   "fields": {
+    "created_at": "2022-10-16T11:31:10.943Z",
+    "updated_at": "2022-10-18T08:59:20.672Z",
     "title": "LORO PIANA",
-    "description": "Made in Italy from the label's Storm System® Wind microfiber fabric, this waterproof and wind-resistant cap from Loro Piana has a checked underside, and an embroidered logo at the front.\r\nLoro Piana, kakoi loro piano, ya tebe otvechayu rodnoi loro piano eto, kakaya lora blyat'? loro piano smotri, kapec ty krutoi emae, eto che zhenskaya blyat', eto muzhskaya.\r\n\r\nmaterial: 100% polyester\r\nlining: 64% cotton, 36% polyester, partially lined\r\ncare instructions: dry clean\r\nMade in Italy\r\nDesigner colour name: Green/Min/Ivory\r\n",
+    "description": "Made in Italy from the label's Storm System® Wind microfiber fabric, this waterproof and wind-resistant cap from Loro Piana has a checked underside, and an embroidered logo at the front.\r\nLoro Piana, kakoi loro piano, ya tebe otvechayu rodnoi loro piano eto, kakaya lora blyat'? loro piano smotri, kapec ty krutoi emae, eto che zhenskaya blyat', eto muzhskaya.\r\n\r\nmaterial: 100% polyester\r\nlining: 64% cotton, 36% polyester, partially lined\r\ncare instructions: dry clean\r\nMade in Italy\r\nDesigner colour name: Green/Min/Ivory",
     "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/f8/P00641958.jpg",
     "category": "other",
     "rest": 10,
     "price": "100.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 15,
+  "fields": {
+    "created_at": "2022-10-16T11:31:10.943Z",
+    "updated_at": "2022-10-18T08:59:17.233Z",
+    "title": "THOM BROWNE",
+    "description": "This elegant sweater vest from Thom Browne is finely knitted from pure cashmere and made for a regular fit. The buttoned design is accented with slit pockets and the brand's signature 4-Bar motif.\r\n\r\n\r\nmaterial: 100% cashmere\r\ncare instructions: dry clean\r\nslit pockets\r\nbuttoned front\r\nMade in the UK\r\nDesigner colour name: Med Grey\r\nRuns small, please see Size & Fit tab",
+    "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/98/P00698913.jpg",
+    "category": "jackets",
+    "rest": 17,
+    "price": "200.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 16,
+  "fields": {
+    "created_at": "2022-10-16T11:32:09.149Z",
+    "updated_at": "2022-10-18T08:59:10.452Z",
+    "title": "THE ROW",
+    "description": "Made in Italy from a soft, charcoal grey knit, these slippers from The Row are set on low rubber soles and feature an elasticated element on the back for easy fit.\r\n\r\n\r\nupper: fabric\r\nlining: fabric\r\nsole: leather insole, rubber sole\r\nelasticated strap\r\nMade in Italy\r\ncomes with dust bag\r\ncomes with a box\r\nDesigner colour name: Grey",
+    "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/2a/P00681284.jpg",
+    "category": "shoes",
+    "rest": 20,
+    "price": "300.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 17,
+  "fields": {
+    "created_at": "2022-10-16T11:41:29.383Z",
+    "updated_at": "2022-10-18T08:59:05.215Z",
+    "title": "SAINT LAURENT",
+    "description": "The Clyde jeans from Saint Laurent are made from organically cultivated cotton and cut into a classic five-pocket style. The tonal design has a high-rise and wide-leg finish.\r\n\r\n\r\nmaterial: 100% cotton\r\nfive pockets\r\nzipper fly, button fastening\r\nMade in Italy\r\nbelt loops\r\nDesigner colour name: Worn Black",
+    "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/10/P00709508.jpg",
+    "category": "jeans",
+    "rest": 20,
+    "price": "300.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 18,
+  "fields": {
+    "created_at": "2022-10-16T11:42:49.008Z",
+    "updated_at": "2022-10-18T08:59:00.179Z",
+    "title": "ADISH",
+    "description": "This cotton shirt from Adish is made to a button-down silhouette, with artful embroidery at the chest.\r\n\r\n\r\nmaterial: 100% cotton\r\ncare instructions: hand wash\r\nbreast pocket\r\nbuttoned front\r\nbuttoned cuffs\r\nDesigner colour name: Light Green\r\nMade in occupied Palestinian territories\r\nRuns large, please see Size & Fit tab",
+    "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/3f/P00702894.jpg",
+    "category": "shirts",
+    "rest": 12,
+    "price": "150.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 19,
+  "fields": {
+    "created_at": "2022-10-16T11:43:41.589Z",
+    "updated_at": "2022-10-18T08:58:26.695Z",
+    "title": "DIOR EYEWEAR",
+    "description": "Distinguished by tinted lenses, the DiorBlackSuit sunglasses from Dior Eyewear are accented by round, two-tone frames with a silver-toned nose bridge and hardware.\r\n\r\n\r\nmaterial: acetate\r\nlens colour: blue\r\nframe colour: grey blue\r\ntinted lenses, mirrored lenses\r\nlens filter category 3\r\nMade in Italy\r\ncomes with a case and presentation box\r\ncomes with cleaning cloth",
+    "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/4f/P00739252.jpg",
+    "category": "other",
+    "rest": 20,
+    "price": "200.00"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$EbKksnG417huqsPKDyJmVX$d87mqsorZLiB1JePbvOpiiwayahMk9bk/l+mikZdS2g=",
+    "last_login": "2022-10-17T15:16:15.231Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-01T16:26:30.554Z",
+    "groups": [],
+    "user_permissions": []
   }
 }
 ]

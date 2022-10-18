@@ -130,6 +130,7 @@ body {
 }
 
 .pagination {
+    justify-content: center;
     text-align: center;
 }
 
@@ -172,4 +173,8 @@ body {
 
 .table {
     color: white;
+}
+
+.basket{
+    width: 400px;
 }

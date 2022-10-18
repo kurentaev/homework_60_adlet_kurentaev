@@ -1,11 +1,10 @@
 from django.contrib import admin
-
-from webapp.models import Product, Basket
+from webapp.models import Product, Basket, Order
 
 
 class ProductsListAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'description', 'image', 'category', 'rest', 'price']
-    list_filter = ['id', 'title', 'description', 'image', 'category', 'rest', 'price']
+    list_display = ['id', 'title', 'category', 'rest', 'price']
+    list_filter = ['id', 'title', 'category', 'rest', 'price']
     search_fields = ['title', 'category']
     fields = ['id', 'title', 'description', 'image', 'category', 'rest', 'price']
     readonly_fields = ['id']
@@ -22,3 +21,13 @@ class BasketListAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Basket, BasketListAdmin)
+
+
+class OrderListAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'phone', 'address']
+    list_filter = ['name', 'phone']
+    search_fields = ['name', 'phone']
+    fields = ['name', 'phone', 'address']
+
+
+admin.site.register(Order, OrderListAdmin)

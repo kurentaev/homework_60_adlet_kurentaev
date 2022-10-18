@@ -1,9 +1,5 @@
 from django import forms
-from django.core.exceptions import ValidationError
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404
-from webapp.models import StatusChoices, Product
-
+from webapp.models import StatusChoices, Product, Order
 from webapp.models import Basket
 
 
@@ -25,3 +21,9 @@ class BasketForm(forms.ModelForm):
     class Meta:
         model = Basket
         fields = ('quantity',)
+
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ('name', 'address', 'phone')
