@@ -9,6 +9,9 @@
           Products not found
           {% else %}
           {% endif %}</h4>
+            {% if is_paginated %}
+                {% include 'partial/pagination.html' %}
+            {% endif %}
             {% for product in products %}
             {% if product.rest < 1 %}
             {% else %}
@@ -19,6 +22,7 @@
                   <h2><a class="detail" href="{% url 'product_detail' product.pk %}">{{ product.title }}</a></h2>
                   <h2>Category: {{ product.get_category_display }}</h2>
                   <h2>Price: {{ product.price }} $</h2>
+                  <h2>{% include 'partial/basket_form.html' %}</h2>
                 </td>
               </tr>
             </table>

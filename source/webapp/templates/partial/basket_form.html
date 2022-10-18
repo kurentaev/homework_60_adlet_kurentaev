@@ -1,0 +1,7 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<form action="{% url 'product_basket_add'  product.pk %}" method="post">
+    {% csrf_token %}
+    <input type="number" name="quantity" min="0" value="1">
+    {% bootstrap_button button_class="btn-secondary" button_type="submit" content='ADD' %}
+</form>

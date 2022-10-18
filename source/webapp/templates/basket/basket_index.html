@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Price</th>
+            <th scope="col">Sum</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for b in basket %}
+            <tr>
+                <td>{{ b.product.title }}</td>
+                <td>{{ b.quantity }}</td>
+                <td>{{ b.product.price }}</td>
+                <td>{{ b.get_sum }}</td>
+                <td><a href="{% url 'product_basket_delete' b.pk %}">Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h5>Total price: {{ get_total }}</h5>
+{% endblock %}
